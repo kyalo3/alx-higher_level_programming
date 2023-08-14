@@ -16,4 +16,4 @@ if result % 10 == 0:
 elif result > 5:
     print(f"Last digit of {number} is {result} and is greater than 5")
 else:
-    print(f"Last digit of {number} is {result} and is less than 6 and not 0")
+    print("Last digit of {} is {} and is less than 6 and not 0".format(number, result))
