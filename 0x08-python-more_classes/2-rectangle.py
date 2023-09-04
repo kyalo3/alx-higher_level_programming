@@ -43,10 +43,12 @@ class Rectangle:
 
     def area(self):
         """area of the reactangle"""
-        return 2 * (self.__width * self.__height)
+        area = self.__width * self.__height
+        return area
 
     def perimeter(self):
         """perimeter of the rectangle"""
         if self.__width == 0 or self.__height == 0:
             return 0
-        return (self.__width + self.__height)
+        perimeter = 2 * (self.__width + self.__height)
+        return perimeter
