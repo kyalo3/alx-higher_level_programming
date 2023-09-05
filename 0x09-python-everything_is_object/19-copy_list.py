@@ -1,3 +1,3 @@
-def copy_list(my_list):
-    my_list = [1, 2, 3]
-    return (my_list)
+def copy_list(l):
+    l = [1, 2, 3]
+    return (l)
