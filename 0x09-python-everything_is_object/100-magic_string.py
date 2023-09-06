@@ -1,4 +1,3 @@
 def magic_string():
-    for i in range(10):
-    i += "BestSchool"
-    return(i)
+    setattr(magic_string, 'count', getattr(magic_string, 'count', 0) + 1)
+    return 'BestSchool' * getattr(magic_string, 'count')
