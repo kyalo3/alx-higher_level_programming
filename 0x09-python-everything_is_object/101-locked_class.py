@@ -1,5 +1,5 @@
 class LockedClass:
-    __slots__ = ['first_name']
+    __slots__ = ('first_name',)
 
     def __init__(self):
         if hasattr(self, 'first_name'):
@@ -10,5 +10,6 @@ class LockedClass:
             super().__setattr__(name, value)
         else:
             raise AttributeError(f"'LockedClass' object has no attribute '{name}'")
+
 
 
