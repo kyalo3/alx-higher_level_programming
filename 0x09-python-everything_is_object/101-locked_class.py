@@ -1,7 +1,11 @@
+#!/usr/bin/python3
 class LockedClass:
+    """ class Lockedclass"""
     __slots__ = ('first_name',)
 
+
     def __init__(self):
+        ""
         if hasattr(self, 'first_name'):
             self.first_name = None
 
