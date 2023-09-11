@@ -1,7 +1,10 @@
+#!/usr/bin/python3
+"""
+A class - basic geometry
+"""
+
+
 class BaseGeometry:
-
-    def __init__(self, area):
-        self.area = area
-
+    """a public instance method """
     def area(self):
-            
+        raise Exception(area() is not implemented)
