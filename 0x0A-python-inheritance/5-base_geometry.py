@@ -1,5 +1,8 @@
 #!/usr/bin/python3
+"""
+Empty class - basic geometry
+"""
+
 
 class BaseGeometry:
-    """This is an empty class for representing basic geometry."""
     pass
