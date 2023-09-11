@@ -14,9 +14,4 @@ def inherits_from(obj, a_class):
     Returns:
         True if obj is an instance of a class that inherits from a_class
     """
-    cls = obj.__class__
-    while cls is not None:
-        if cls == a_class:
-            return True
-        cls = cls.__base__
-    return False
+    return type(obj) != a_class and isinstance(obj, a_class)
