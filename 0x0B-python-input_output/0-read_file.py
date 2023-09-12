@@ -16,4 +16,4 @@ def read_file(filename="my_file_0.txt"):
         pass
 
 
-#read_file("my_file_0.txt")
+"""read_file("my_file_0.txt")"""
