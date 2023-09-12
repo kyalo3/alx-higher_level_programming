@@ -12,4 +12,5 @@ def read_file(filename="my_file_0.txt"):
     except FileNotFoundError:
         pass
 
+
 read_file('my_file_0.txt')
