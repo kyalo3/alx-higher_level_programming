@@ -6,6 +6,7 @@ a function that reads a text file and prints it to stdout:
 
 def read_file(filename="my_file_0.txt"):
     """open function"""
+
     try:
         with open(filename, 'r', encoding='utf-8') as file:
             for line in file:
@@ -15,4 +16,4 @@ def read_file(filename="my_file_0.txt"):
         pass
 
 
-read_file('my_file_0.txt')
+read_file("my_file_0.txt")
