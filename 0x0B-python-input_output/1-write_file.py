@@ -10,4 +10,4 @@ def write_file(filename="my_first_file.txt", text="This School is so cool!\n"):
         return file.write(text)
 
 
-write_file('my_first_file.txt', 'This School is so cool!\n')
+"""write_file('my_first_file.txt', 'This School is so cool!\n')"""
