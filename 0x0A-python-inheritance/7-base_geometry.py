@@ -17,7 +17,7 @@ class BaseGeometry:
             name (sring): a string
             value (int): the intager value
         """
-        if type(value) != int:
+        if isinstance(value, int) and value > 0:
             raise TypeError("{} must be an integer".format(name))
         if value <= 0:
             raise ValueError("{} must be greater than 0".format(name))
