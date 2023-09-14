@@ -5,6 +5,7 @@ class Student that defines a student
 
 import json
 
+
 class Student:
     def __init__(self, first_name, last_name, age):
         self.first_name = first_name
