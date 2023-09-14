@@ -13,9 +13,9 @@ class Student:
         self.age = age
 
     def to_json(self):
-        return {
+        """return {
             "first_name": self.first_name,
             "last_name": self.first_name.split()[0],
             "age": self.age
-            }
-        #return self.__dict__
+            }"""
+        return self.__dict__
