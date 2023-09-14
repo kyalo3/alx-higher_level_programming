@@ -18,4 +18,4 @@ class Student:
             "last_name": self.first_name.split()[0],
             "age": self.age
             }
-        return student._dict
+        return Student._dict
