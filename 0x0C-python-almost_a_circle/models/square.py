@@ -18,13 +18,20 @@ class Square(Rectangle):
         return self.width
 
     @size.setter
-    def self(self, value):
+    def size(self, value):
         """size setter"""
         self.integer_validator("size", value)
         self.width = value
         self.height = value
-
+    def integer_validator(self, name, value):
+        """Validate that value is a positive integer."""
+        if not isinstance(value, int):
+            raise TypeError(f"{name} must be an integer")
+        if value <= 0:
+            raise ValueError(f"{name} must be > 0")
     def __str__(self):
         """String representation of Square"""
-        sq_str = (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
-        return sq_str
+        return (
+            f"[Square] ({self.id}) "
+            f"{self.x}/{self.y} - {self.width}"
+            )
