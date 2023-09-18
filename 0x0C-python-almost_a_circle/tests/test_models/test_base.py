@@ -1,6 +1,5 @@
 #!/usr/bin/python3
 # test_base.py
-# Sagebeme
 """Defines unittests for base.py.
 
 Unittest classes:
