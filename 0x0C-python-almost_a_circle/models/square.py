@@ -41,11 +41,11 @@ class Square(Rectangle):
     def update(self, *args, **kwargs):
         """args and kwargs"""
         if args:
-             update = ['id', 'width', 'height', 'x', 'y']
+            update = ['id', 'width', 'height', 'x', 'y']
 
-             for i, arg in enumerate(args):
-                 if i < len(update):
-                     setattr(self, update[i], arg)
+        for i, arg in enumerate(args):
+            if i < len(update):
+                setattr(self, update[i], arg)
 
         else:
             for key, value in kwargs.items():
