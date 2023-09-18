@@ -3,6 +3,10 @@
 create a class - Base
 """
 
+import os
+import unittest
+from tests.test_models import test_base
+
 
 class Base:
     """private class attribute"""
