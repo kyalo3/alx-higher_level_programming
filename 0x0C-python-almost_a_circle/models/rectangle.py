@@ -15,7 +15,6 @@ class Rectangle(Base):
         self.height = height
         self.x = x
         self.y = y
-        #self.id = id  #attribute id
 
     @property
     def width(self):
@@ -93,18 +92,12 @@ class Rectangle(Base):
         """update the attributes of Rectangle:"""
         if args:
             update = ['id', 'width', 'height', 'x', 'y']
-        
+
             for i, arg in enumerate(args):
                 if i < len(update):
                     setattr(self, update[i], arg)
 
-        """self.id = args[0]
-        self.width = args[1]
-        self.height = args[2]
-        self.x = args[3]
-        self.y = args[4]"""
-
-        #kwargs = {'arg1': id, 'arg2': width, 'arg3': height, 'arg4': x, 'arg5': y}
-        for key, value in kwargs.items():
-            if hasattr(self, key):
-                setattr(self, key, value)
+        else:
+            for key, value in kwargs.items():
+                if hasattr(self, key):
+                    setattr(self, key, value)
