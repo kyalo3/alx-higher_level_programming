@@ -23,12 +23,14 @@ class Square(Rectangle):
         self.integer_validator("size", value)
         self.width = value
         self.height = value
+
     def integer_validator(self, name, value):
         """Validate that value is a positive integer."""
-        if not isinstance(value, int):
+        if type(value) != int:
             raise TypeError(f"{name} must be an integer")
         if value <= 0:
             raise ValueError(f"{name} must be > 0")
+
     def __str__(self):
         """String representation of Square"""
         return (
