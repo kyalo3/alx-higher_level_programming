@@ -85,13 +85,9 @@ class Rectangle(Base):
             print(' ' * self.__x + '#' * self.__width)
 
     def __str__(self):
-        """Overrides the default __str__ method"""
-        str_self = f("[Rectangle] ({self.id}) "
-                     f"{self.__x}/{self.__y} - "
-                     f"{self.__width}/{self.__height}")
-
-        return (str_self)
-
+        """str rep of Rectangle"""
+        return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+    
     def update(self, *args, **kwargs):
         """update the attributes of Rectangle:"""
         if args:
