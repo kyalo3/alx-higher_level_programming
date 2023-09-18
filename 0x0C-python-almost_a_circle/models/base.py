@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 """
-a class - Base
+create a class - Base
 """
 
 
@@ -10,6 +10,7 @@ class Base:
     __nb_objects = 0
 
     def __init__(self, id=None):
+        """instance/ attributes of base class"""
         if id is not None:
             self.id = id
         else:
