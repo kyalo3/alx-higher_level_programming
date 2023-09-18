@@ -3,9 +3,10 @@
 create a class - Base
 """
 
-import os
+import json
+import os.path
+import csv
 import unittest
-from tests.test_models import test_base
 
 
 class Base:
