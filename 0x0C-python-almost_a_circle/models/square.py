@@ -27,5 +27,5 @@ class Square(Rectangle):
 
     def __str__(self):
         """String representation of Square"""
-        sq_str = (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}") 
+        sq_str = (f"[Square] ({self.id}) {self.x}/{self.y} - {self.width}")
         return sq_str
