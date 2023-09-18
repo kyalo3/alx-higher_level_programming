@@ -88,3 +88,11 @@ class Rectangle(Base):
     def __str__(self):
         """Overrides the default __str__ method"""
         return f"[Rectangle] ({self.id}) {self.__x}/{self.__y} - {self.__width}/{self.__height}"
+
+    def update(self, *args):
+        """update the attributes of Rectangle:"""
+        update = ['id', 'width', 'height', 'x', 'y']
+        
+        for i,value in enumerate(args):
+            if i < len(update):
+                setattr(self, update[i], value)
