@@ -7,18 +7,21 @@ from models.base import Base
 
 class Rectangle(Base):
 
-
     def __init__(self, width, height, x=0, y=0, id=None):
         """constructor"""
+        super().__init__(id)
         self.width = width
         self.height = height
         self.x = x
         self.y = y
+        #self.id = id  #attribute id
 
+    @property
     def width(self):
         """width getter"""
         return self.__width
 
+    @width.setter
     def width(self, value):
         """width setter"""
         if not isinstance(value, int):
@@ -50,3 +53,15 @@ class Rectangle(Base):
         if value < 0:
             raise ValueError("x m ust be >= 0")
         self.__x = value
+        
+    def y(self):
+        """y getter"""
+        return self.__y
+
+    def y(self, value):
+        """y setter"""
+        if not isinstance(value, int):
+            raise TypeError("y must be an integer")
+        if value < 0:
+            raise ValueError("y must be >= 0")
+        self.__y = value
