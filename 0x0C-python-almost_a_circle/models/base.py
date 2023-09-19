@@ -42,3 +42,10 @@ class Base:
 
         with open(filename, 'w', encoding="utf-8") as my_file:
             my_file.write(cls.to_json_string(list_dict))
+
+    def from_json_string(json_string):
+        """JSON string to dictionary"""
+        if json_string is None or json_string == "":
+            return []
+        return json.loads(json_string)
+
