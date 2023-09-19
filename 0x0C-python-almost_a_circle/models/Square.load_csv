@@ -1,0 +1,14 @@
+@classmethod
+def load_from_file_csv(cls):
+    """Deserializes a list of Square instances from a CSV file."""
+    filename = cls.__name__ + ".csv"
+
+    try:
+        with open(filename, 'r', newline='') as file:
+            reader = csv.reader(file)
+            instances = []
+            for row in reader:
+                instances.append(cls(int(row[1]), int(row[2]), int(row[3]), int(row[0])))
+            return instances
+    except FileNotFoundError:
+        return []

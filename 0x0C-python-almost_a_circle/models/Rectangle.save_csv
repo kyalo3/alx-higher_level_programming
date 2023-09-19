@@ -1,0 +1,9 @@
+@classmethod
+def save_to_file_csv(cls, list_objs):
+    """Serializes a list of Rectangle instances to a CSV file."""
+    filename = cls.__name__ + ".csv"
+
+    with open(filename, 'w', newline='') as file:
+        writer = csv.writer(file)
+        for obj in list_objs:
+            writer.writerow([obj.id, obj.width, obj.height, obj.x, obj.y])
