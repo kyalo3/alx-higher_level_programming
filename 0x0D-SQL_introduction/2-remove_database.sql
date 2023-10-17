@@ -2,7 +2,6 @@
 -- Author: Your Name
 -- Date: 2023-10-03
 
-SHOW DATABASES;
 CREATE DATABASE<hbtn_0c_0>(
     CustomerID INT PRIMARY KEY,
     CustomerName VARCHAR(50),
