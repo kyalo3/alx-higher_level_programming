@@ -1,8 +1,5 @@
--- SQL Script to Create Employee Table
--- Author: Your Name
--- Date: 2023-10-03
+-- SQL Script
+-- Author: BRIAN
 
 SHOW DATABASES;
-CREATE DATABASE<hbtn_0c_0>(
-		
-);
+CREATE DATABASE IF NOT EXISTS hbtn_0c_0;
