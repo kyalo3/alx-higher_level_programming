@@ -1,4 +1,4 @@
--- script that displays the average temperature (Fahrenheit) by city ordered by temperature (descending)
+-- script that displays the average temperature (Fahrenheit) by city order
 SELECT
     city,
     AVG(temperature) AS avg_temperature_fahrenheit
