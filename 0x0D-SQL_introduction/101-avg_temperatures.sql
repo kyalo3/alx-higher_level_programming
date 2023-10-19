@@ -3,7 +3,7 @@ SELECT
     city,
     AVG(temperature) AS avg_temperature_fahrenheit
 FROM
-    your_table_name -- Replace with the actual table name
+    temperatures -- Replace with the actual table name
 GROUP BY
     city
 ORDER BY
