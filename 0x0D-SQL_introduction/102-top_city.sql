@@ -6,7 +6,7 @@ SELECT
     city,
     MAX(temperature) AS max_temperature
 FROM
-    temperatures
+    hbtn_0c_0.temperatures
 WHERE
     month IN (7, 8)  -- Filter for July and August
 GROUP BY
