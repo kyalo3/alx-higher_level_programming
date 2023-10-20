@@ -1,16 +1,2 @@
--- Import the table dump into hbtn_0c_0 database if not already imported
--- You can use the source command in the MySQL command-line:
--- SOURCE /path/to/table_dump.sql;
-
-SELECT
-    city,
-    MAX(temperature) AS max_temperature
-FROM
-    hbtn_0c_0.temperatures
-WHERE
-    month IN (7, 8)  -- Filter for July and August
-GROUP BY
-    city
-ORDER BY
-    max_temperature DESC
-LIMIT 3;
+-- displays the top 3 of cities temperature ordered by temperature
+SELECT city, AVG(value) AS avg_temp FROM 'temperatures' WHERE month = 7 OR month = 8 GROUP BY city ORDER BY avg_temp DESC LIMIT 3;
