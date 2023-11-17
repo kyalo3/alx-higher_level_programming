@@ -21,7 +21,7 @@ if __name__ == "__main__":
 
     query = "SELECT * FROM states WHERE  name LIKE BINARY %s ORDER BY id ASC"
     cursor = db.cursor()
-    cursor.execute(query, (state,))
+    cursor.execute(query, (argv[4],))
 
     """fetch all rows"""
     rows = cursor.fetchall()
