@@ -31,6 +31,6 @@ if __name__ == "__main__":
     for row in rows:
         print(row)
 
-    "close the cursor nd connection"
+    "close the cursor and connection"
     cursor.close()
     db.close()

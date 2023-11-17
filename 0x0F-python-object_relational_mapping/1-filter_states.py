@@ -2,7 +2,7 @@
 
 """
 a script that lists all states with a name
- starting with N (upper N) from the
+starting with N (upper N) from the
 database hbtn_0e_0_usa:
 """
 
@@ -21,12 +21,12 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id ASC")
 
-    """print results in delimited format"""
+    """fetch all rows"""
     rows = cursor.fetchall()
 
     for row in rows:
         print(row)
 
-    """connections close"""
+    """close connections in cursor and db"""
     cursor.close()
     db.close()
