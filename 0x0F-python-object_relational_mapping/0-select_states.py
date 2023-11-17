@@ -7,14 +7,13 @@ lists all states in my database
 import MySQLdb
 from sys import argv
 
-"""arguments passed as parameters"""
-user = argv[1]
-passwd = argv[2]
-db = argv[3]
-
 if __name__ == "__main__":
+    user = argv[1]
+    passwd = argv[2]
+    db = argv[3]
+
     """command line arguments"""
-    db = MySQLdb.connect(port=3306, user=argv[1], passwd=argv[2], db=argv[3])
+    db = MySQLdb.connect(port=3306,	user=argv[1], passwd=argv[2], db=argv[3])
 
     """getting cursor and execution"""
     cursor = db.cursor()
