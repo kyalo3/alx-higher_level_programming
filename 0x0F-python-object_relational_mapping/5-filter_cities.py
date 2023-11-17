@@ -34,7 +34,7 @@ if __name__ == "__main__":
     rows = cursor.fetchall()
 
     """print the cities"""
-    cities = ','.join(city[0] for city in rows)
+    cities = ', '.join(city[0] for city in rows)
     print(cities)
 
     """close the cursor and database"""
