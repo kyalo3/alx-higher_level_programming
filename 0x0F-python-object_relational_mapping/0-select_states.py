@@ -16,13 +16,4 @@ if __name__ == "__main__":
     cursor = db.cursor()
     cursor.execute("SELECT * FROM states")
 
-    """print results in delimited format"""
-    rows = cursor.fetchall()
-
-    """iterate the rows"""
-    for row in rows:
-        print(row)
-
-    """close both dtabse and cursor"""
-    cursor.close()
-    db.close()
+    [print(state) for state in cursor.fetchall()]
