@@ -21,7 +21,7 @@ if __name__ == "__main__":
     """getting cursor and execution"""
     cursor = db.cursor()
     query = """
-        SELECT cities.id, cities.name
+        SELECT cities.name
         FROM cities
         JOIN states ON cities.state_id = states.id
         WHERE states.name = %s
@@ -32,8 +32,10 @@ if __name__ == "__main__":
 
     """fetch all the rows"""
     rows = cursor.fetchall()
-    for city in rows:
-        print(city)
+
+    """print the cities"""
+    cities = ','.join(city[0] for city in rows)
+    print(cities)
 
     """close the cursor and database"""
     cursor.close()
