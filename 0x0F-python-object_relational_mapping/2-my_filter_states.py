@@ -17,7 +17,7 @@ if __name__ == "__main__":
     state = argv[4]
 
     "connection to my database"
-    db = MySQLdb.connect(user=argv[1], passwd=argv[2], db=argv[3])
+    db = MySQLdb.connect(port=3306, user=argv[1], passwd=argv[2], db=argv[3])
     cursor = db.cursor()
 
     query = ("SELECT * FROM states "
