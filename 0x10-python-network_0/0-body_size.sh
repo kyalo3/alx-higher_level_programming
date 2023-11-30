@@ -1,5 +1,3 @@
- #!/bin/bash
-
-url=$1
-
-curl -sI 'url' | grep -i 'content-length' | awk '{print $2}' | tr -d '\r'
+#!/bin/bash
+# bash script that sends a request to a url and displays the size of body
+curl -s "$1" | wc -c
