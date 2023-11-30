@@ -8,4 +8,4 @@ fi
 url=$1
 
 requests=$(curl -s -H 'X-School-User-Id: 98' 'url')
-echo 'Hello School!'
+echo ${requests}
