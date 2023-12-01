@@ -15,10 +15,8 @@ if __name__ == "__main__":
     email = sys.argv[2]
 
     """encode the email as a URL parameter"""
-    data = urllib.parse.urlencode({"email": email}).encode("utf-8")
+    data = urllib.parse.urlencode({"email": sys.argv[2]}).encode("ascii")
 
-    try:
-        with urllib.request.urlopen(url) as response:
-            print(response.read().decode("utf-8"))
-    except urllib.error.HTTPError as e:
-        print("Error code: {}".format(e.code))
+    request = urllib.request.Request(url, data)
+    with urllib.request.urlopen(request) as response:
+        print(response.read().decode("utf-8"))
