@@ -1,11 +1,11 @@
 #!/usr/bin/python3
 """a Python script that fetches"""
-import requests
+from urllib.request import urlopen
 
-url = 'https://alx-intranet.hbtn.io/status'
+with urlopen('https://alx-intranet.hbtn.io/status') as response:
 
-with requests.get(url) as response:
-    html = response.text
+    response = urlopen("https://alx-intranet.hbtn.io/status")
+    html = response.read()
     print("Body response:")
     print("\t - type: <class 'bytes'>")
     print("\t - content: b'OK''")
